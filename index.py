@@ -11,6 +11,22 @@ def ConstBoard(board):
             print("O ", end=" ");
     print("\n\n");
 
+def User1Turn(board):
+    pos = input("Enter X's position from [1,2,3,..., 9]");
+    pos = int(pos);
+    if(board[pos-1]!=0):
+        print("Wrong Move");
+        exit(0);
+    board[pos-1]=-1;
+
+def User2Turn(board):
+    pos = input("Enter O's position from [1,2,3,..., 9]");
+    pos = int(pos);
+    if(board[pos-1]!=0):
+        print("Wrong Move");
+        exit(0);
+    board[pos-1]=1;
+
 
 
 def main():
